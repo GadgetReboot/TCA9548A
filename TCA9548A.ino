@@ -43,7 +43,6 @@ void loop() {
   sendbyte(addr1, 0xFD);   // led bit 1 on
   delay(500);
   sendbyte(addr1, 0xFF);   // leds off
-  Wire.endTransmission();
 
   // control LEDs on second I2C channel
   tcaselect(bus2);
@@ -53,14 +52,12 @@ void loop() {
   sendbyte(addr2, 0xFD);   // led bit 1 on
   delay(500);
   sendbyte(addr2, 0xFF);   // leds off
-  Wire.endTransmission();
 
   sendbyte(addr3, 0xFE);   // led bit 0 on
   delay(500);
   sendbyte(addr3, 0xFD);   // led bit 1 on
   delay(500);
   sendbyte(addr3, 0xFF);   // leds off
-  Wire.endTransmission();
 
 }
 
